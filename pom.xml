@@ -30,7 +30,7 @@
 		<java.version>17</java.version>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-		<sonar.login>squ_8d60fe51674e32eaa0f94e9d151640f02f9efa4e</sonar.login>
+		<sonar.login>squ_9e163c885d6d6d06a320ec206ec98d36be52007e</sonar.login>
 		<sonar.projectKey>myFirstProject</sonar.projectKey>
 		<sonar.projectName>myFirstProject</sonar.projectName>
 		<sonar.organization>er-ramraje</sonar.organization>
