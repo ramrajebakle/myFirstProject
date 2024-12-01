@@ -30,9 +30,9 @@
 		<java.version>17</java.version>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-		<sonar.login>a2d3fe2d2b4f2ba0f08e2120c3a978a2241478e1</sonar.login>
-		<sonar.projectKey>myFirstProject</sonar.projectKey>
-		<sonar.projectName>myFirstProject</sonar.projectName>
+		<sonar.login>squ_8d60fe51674e32eaa0f94e9d151640f02f9efa4e</sonar.login>
+<!--		<sonar.projectKey>myFirstProject</sonar.projectKey>-->
+<!--		<sonar.projectName>myFirstProject</sonar.projectName>-->
 		<sonar.organization>er-ramraje</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
