@@ -30,9 +30,9 @@
 		<java.version>17</java.version>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-<!--		<sonar.login>squ_8d60fe51674e32eaa0f94e9d151640f02f9efa4e</sonar.login>-->
-<!--		<sonar.projectKey>myFirstProject</sonar.projectKey>-->
-<!--		<sonar.projectName>myFirstProject</sonar.projectName>-->
+		<sonar.login>squ_8d60fe51674e32eaa0f94e9d151640f02f9efa4e</sonar.login>
+		<sonar.projectKey>myFirstProject</sonar.projectKey>
+		<sonar.projectName>myFirstProject</sonar.projectName>
 		<sonar.organization>er-ramraje</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
@@ -82,11 +82,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-<!--			<plugin>-->
-<!--				<groupId>org.sonarsource.scanner.maven</groupId>-->
-<!--				<artifactId>sonar-maven-plugin</artifactId>-->
-<!--				<version>4.0.0.4121</version>-->
-<!--			</plugin>-->
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>4.0.0.4121</version>
+			</plugin>
 		</plugins>
 	</build>
 
