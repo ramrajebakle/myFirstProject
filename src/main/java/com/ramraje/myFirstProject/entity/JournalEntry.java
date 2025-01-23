@@ -1,5 +1,6 @@
 package com.ramraje.myFirstProject.entity;
 
+import com.ramraje.myFirstProject.enums.Sentiment;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
@@ -20,7 +21,7 @@ public class JournalEntry {
     private  String title;
     private  String content;
     private  LocalDateTime date;
-
+    private Sentiment sentiment;
 //    public void setId(ObjectId id) {
 //        this.id = id;
 //    }

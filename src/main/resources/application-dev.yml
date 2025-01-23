@@ -4,13 +4,48 @@
 #spring.data.mongodb.database=journaldb
 #spring.data.mongodb.uri=
 #spring.data.mongodb.auto-index-creation=true
+
+#spring:
+#  redis:
+#    host: localhost
+#    port: 6379
 spring:
+  redis:
+    host: redis-13177.c305.ap-south-1-1.ec2.redns.redis-cloud.com
+    port: 13177
+    username: default
+    password: ZRPOoBzAlmxNIsJ18PQynybDfFEjV5Mq
+  kafka:
+    bootstrap-servers: pkc-l7pr2.ap-south-1.aws.confluent.cloud:9092
+    properties:
+      sasl.mechanism: PLAIN
+      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username='IR3W47LSEHIBBWFK' password='BV75//MpYQrWIHa0wejuJEY6YvFWnpU3MnsG5FNveXrJG3TcFfPWba3f6/pLvCAk';
+      security.protocol: SASL_SSL
+      session.timeout.ms: 45000
+    client-id: ccloud-springboot-client-d1791db7-c16b-4e94-8af2-d5d1ee1787dd
+
+
   data:
     mongodb:
       auto-index-creation: true
       database: journaldb
       uri: mongodb+srv://ramrajebakle:Ramraje9860@cluster0.hqw4g.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ramrajebakle@gmail.com
+    password: sctv zwee kmid ftmv
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 server:
-  port: 8080
+  port: 8081
   servlet:
     context-path: /dev
+
+weather:
+  api:
+    key: 5f39b49683b00abeecd7d08a00e6421c

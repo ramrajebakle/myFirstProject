@@ -1,8 +1,10 @@
 package com.ramraje.myFirstProject.controller;
 
+import com.ramraje.myFirstProject.api.response.WeatherResponse;
 import com.ramraje.myFirstProject.entity.User;
 import com.ramraje.myFirstProject.repository.UserRepository;
 import com.ramraje.myFirstProject.service.UserService;
+import com.ramraje.myFirstProject.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +19,9 @@ public class userController {
     private UserService userService;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private WeatherService weatherService;
+
 
     @PutMapping
     public ResponseEntity<?> updateUser(@RequestBody User user) {
@@ -36,5 +41,15 @@ public class userController {
         String username=authentication.getName();
         userRepository.deleteUserByUsername(username);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+    @GetMapping
+    public ResponseEntity<?> greeting() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        WeatherResponse weatherResponse=weatherService.getWeather("Mumbai");
+        String greeting="";
+        if(weatherResponse!=null) {
+            greeting=", Weather feels like "+weatherResponse.getCurrent().getFeelslike();
+        }
+        return new ResponseEntity<>("Hii "+authentication.getName()+greeting, HttpStatus.OK);
     }
 }
